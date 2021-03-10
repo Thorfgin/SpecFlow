@@ -18,22 +18,13 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <Authors>$(SpecFlow_Authors)</Authors>
+    <Authors>Speer IT</Authors>
     <Company>Tricentis</Company>
     <Product />
-    <PackageProjectUrl>https://www.specflow.org</PackageProjectUrl>
-    <PackageIcon>images/specflow-icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/SpecFlowOSS/SpecFlow</RepositoryUrl>
-    <PackageTags>specflow bdd gherkin cucumber</PackageTags>
-    <Description>SpecFlow aims at bridging the communication gap between domain experts and developers by binding business readable behavior specifications to the underlying implementation. Our mission is to provide a pragmatic and frictionless approach to Acceptance Test Driven Development and Behavior Driven Development for .NET projects today."</Description>
-    <Copyright>$(SpecFlow_Copyright)</Copyright>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup>
     <SpecFlow_FullFramework_TFM>net461</SpecFlow_FullFramework_TFM>
-
-    <SpecFlow_Net5_TFM>net5.0</SpecFlow_Net5_TFM>
 
     <SpecFlow_FullFramework_Runtime_TFM>$(SpecFlow_FullFramework_TFM)</SpecFlow_FullFramework_Runtime_TFM>
     <SpecFlow_Core_Runtime_TFM>netstandard2.0</SpecFlow_Core_Runtime_TFM>
@@ -42,20 +33,17 @@
     <SpecFlow_Core_Generator_TFM>netcoreapp2.1</SpecFlow_Core_Generator_TFM>
 
     <SpecFlow_FullFramework_Test_TFM>$(SpecFlow_FullFramework_TFM)</SpecFlow_FullFramework_Test_TFM>
-    <SpecFlow_Core_Test_TFM>netcoreapp2.1;netcoreapp3.1;net5.0</SpecFlow_Core_Test_TFM>
+    <SpecFlow_Core_Test_TFM>netcoreapp2.1</SpecFlow_Core_Test_TFM>
 
     <SpecFlow_FullFramework_Specs_TFM>$(SpecFlow_FullFramework_TFM)</SpecFlow_FullFramework_Specs_TFM>
-    <SpecFlow_Net5_Specs_TFM>$(SpecFlow_Net5_TFM)</SpecFlow_Net5_Specs_TFM>
 
     <SpecFlow_FullFramework_Tools_TFM>$(SpecFlow_FullFramework_TFM)</SpecFlow_FullFramework_Tools_TFM>
     <SpecFlow_Core_Tools_TFM>netcoreapp2.1</SpecFlow_Core_Tools_TFM>    
-    <SpecFlow_Net5_Tools_TFM>$(SpecFlow_Net5_TFM)</SpecFlow_Net5_Tools_TFM>
 
-    <SpecFlow_Runtime_TFM>$(SpecFlow_FullFramework_Runtime_TFM);$(SpecFlow_Core_Runtime_TFM);$(SpecFlow_Net5_TFM)</SpecFlow_Runtime_TFM>
-    <SpecFlow_Generator_TFM>$(SpecFlow_FullFramework_Generator_TFM);$(SpecFlow_Core_Generator_TFM);$(SpecFlow_Net5_TFM)</SpecFlow_Generator_TFM>
+    <SpecFlow_Runtime_TFM>$(SpecFlow_FullFramework_Runtime_TFM);$(SpecFlow_Core_Runtime_TFM)</SpecFlow_Runtime_TFM>
+    <SpecFlow_Generator_TFM>$(SpecFlow_FullFramework_Generator_TFM);$(SpecFlow_Core_Generator_TFM)</SpecFlow_Generator_TFM>
     <SpecFlow_Test_TFM>$(SpecFlow_FullFramework_Test_TFM);$(SpecFlow_Core_Test_TFM)</SpecFlow_Test_TFM>
-    <SpecFlow_Specs_TFM>$(SpecFlow_Net5_Specs_TFM)</SpecFlow_Specs_TFM>
-    <SpecFlow_Tools_TFM>$(SpecFlow_FullFramework_Tools_TFM);$(SpecFlow_Core_Tools_TFM);$(SpecFlow_Net5_Tools_TFM)</SpecFlow_Tools_TFM>
+    <SpecFlow_Tools_TFM>$(SpecFlow_FullFramework_Tools_TFM);$(SpecFlow_Core_Tools_TFM)</SpecFlow_Tools_TFM>
 
     <SpecFlow_EnableStrongNameSigning>true</SpecFlow_EnableStrongNameSigning>
   </PropertyGroup>

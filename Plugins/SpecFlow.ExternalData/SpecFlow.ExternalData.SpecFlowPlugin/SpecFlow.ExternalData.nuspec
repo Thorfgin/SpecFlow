@@ -8,12 +8,6 @@
     <description>Package to use external data in Gherkin scenarios</description>
     <summary>Package to use external data in Gherkin scenarios</summary>
     <language>en-US</language>
-    <projectUrl>https://www.specflow.org</projectUrl>
-    <icon>images\specflow-icon.png</icon>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="file">LICENSE.txt</license>
-    <tags>specflow externaldata json</tags>
-    <copyright>$copyright$</copyright>
     <dependencies>
       <dependency id="SpecFlow" version="[$version$]" />
     </dependencies>
@@ -25,8 +19,5 @@
 
 		<file src="bin\$config$\netcoreapp2.1\SpecFlow.ExternalData.SpecFlowPlugin.dll" target="build\netcoreapp2.1"/>
 		<file src="bin\$config$\netcoreapp2.1\SpecFlow.ExternalData.SpecFlowPlugin.pdb" target="build\netcoreapp2.1"/>
-
-    <file src="$SolutionDir$LICENSE.txt" target="LICENSE.txt" />
-    <file src="$SolutionDir$specflow-icon.png" target="images\" />
   </files>
 </package>
