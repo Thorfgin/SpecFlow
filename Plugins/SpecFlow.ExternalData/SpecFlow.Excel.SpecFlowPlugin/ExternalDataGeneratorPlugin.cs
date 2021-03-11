@@ -4,22 +4,21 @@ using TechTalk.SpecFlow.Generator.Plugins;
 using TechTalk.SpecFlow.Infrastructure;
 using TechTalk.SpecFlow.UnitTestProvider;
 
-[assembly: GeneratorPlugin(typeof(ExcelPlugin))]
+[assembly:GeneratorPlugin(typeof(ExternalDataGeneratorPlugin))]
 
 namespace SpecFlow.ExternalData.Excel.SpecFlowPlugin
 {
-    public class ExcelPlugin : IGeneratorPlugin
+    public class ExternalDataGeneratorPlugin : IGeneratorPlugin
     {
         public void Initialize(GeneratorPluginEvents generatorPluginEvents, GeneratorPluginParameters generatorPluginParameters,
             UnitTestProviderConfiguration unitTestProviderConfiguration)
         {
             generatorPluginEvents.RegisterDependencies += (sender, args) =>
             {
-                args.ObjectContainer.RegisterTypeAs<ExcelTestGenerator, ITestGenerator>();
-                args.ObjectContainer.RegisterTypeAs<ExcelFeaturePatcher, IExcelFeaturePatcher>();
+                args.ObjectContainer.RegisterTypeAs<ExternalDataTestGenerator, ITestGenerator>();
+                args.ObjectContainer.RegisterTypeAs<ExternalDataFeaturePatcher, IExternalDataFeaturePatcher>();
                 args.ObjectContainer.RegisterTypeAs<TestDataProvider, ITestDataProvider>();
             };
         }
     }
 }
-

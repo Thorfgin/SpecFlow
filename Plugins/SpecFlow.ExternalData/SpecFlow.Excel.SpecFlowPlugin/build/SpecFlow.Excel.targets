@@ -1,0 +1,9 @@
+﻿<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<_ExcelGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' == 'Core'">netcoreapp2.1</_ExcelGeneratorPluginFramework>
+		<_ExcelGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' != 'Core'">net461</_ExcelGeneratorPluginFramework>
+
+		<_ExcelGeneratorPluginPath>$(MSBuildThisFileDirectory)$(_ExcelGeneratorPluginFramework)\SpecFlow.Excel.SpecFlowPlugin.dll</_ExcelGeneratorPluginPath>
+
+	</PropertyGroup>
+</Project>

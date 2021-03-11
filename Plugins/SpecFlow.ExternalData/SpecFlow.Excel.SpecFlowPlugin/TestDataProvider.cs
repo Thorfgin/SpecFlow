@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using System.IO;
 using TechTalk.SpecFlow.Generator.Interfaces;
 using Utf8Json;
 
@@ -24,5 +21,4 @@ namespace SpecFlow.ExternalData.Excel.SpecFlowPlugin
 
         public dynamic TestData { get; }
     }
-
 }

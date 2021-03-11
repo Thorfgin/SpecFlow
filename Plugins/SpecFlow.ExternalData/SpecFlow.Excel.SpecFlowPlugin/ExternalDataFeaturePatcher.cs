@@ -1,26 +1,25 @@
-﻿using Gherkin.Ast;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Gherkin.Ast;
 using TechTalk.SpecFlow.Generator.Configuration;
 using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Parser;
 
 namespace SpecFlow.ExternalData.Excel.SpecFlowPlugin
 {
-    public interface IExcelFeaturePatcher
+    public interface IExternalDataFeaturePatcher
     {
         SpecFlowDocument PatchDocument(SpecFlowDocument feature);
     }
 
-    class ExcelFeaturePatcher : IExcelFeaturePatcher
+    public class ExternalDataFeaturePatcher : IExternalDataFeaturePatcher
     {
         public const string PROPERTY_TAG = "property";
         private readonly ITagFilterMatcher _tagFilterMatcher;
         private readonly ITestDataProvider _testDataProvider;
 
-        public ExcelFeaturePatcher(SpecFlowProjectConfiguration configuration, ITagFilterMatcher tagFilterMatcher, ITestDataProvider testDataProvider)
+        public ExternalDataFeaturePatcher(SpecFlowProjectConfiguration configuration, ITagFilterMatcher tagFilterMatcher, ITestDataProvider testDataProvider)
         {
             _tagFilterMatcher = tagFilterMatcher;
             _testDataProvider = testDataProvider;
@@ -63,7 +62,7 @@ namespace SpecFlow.ExternalData.Excel.SpecFlowPlugin
             foreach (var propertyValueToken in propertyValueTokens)
             {
                 var dict = testValues as Dictionary<string, object>;
-                if (dict == null)
+                if (dict == null )
                     throw new InvalidOperationException($"Cannot resolve properties from {testValues}");
 
                 if (!dict.TryGetValue(propertyValueToken, out testValues) &&
@@ -114,7 +113,7 @@ namespace SpecFlow.ExternalData.Excel.SpecFlowPlugin
                                                  originalFeature.Description,
                                                  scenarioDefinitions.ToArray());
 
-            var newDocument = new SpecFlowDocument(newFeature, originalSpecFlowDocument.Comments.ToArray(), originalSpecFlowDocument.SourceFilePath);
+            var newDocument = new SpecFlowDocument(newFeature, originalSpecFlowDocument.Comments.ToArray(), originalSpecFlowDocument.DocumentLocation);
             return newDocument;
         }
     }
