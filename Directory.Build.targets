@@ -2,7 +2,7 @@
   <Target Name="SetNuspecProperties" BeforeTargets="GenerateNuspec" DependsOnTargets="GetBuildVersion">
     <PropertyGroup>
       <NuspecProperties>$(NuspecProperties);config=$(Configuration)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);version=$(NuGetPackageVersion)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);version=3.7.13</NuspecProperties>
       <NuspecProperties>$(NuspecProperties);SolutionDir=$(SolutionDir)</NuspecProperties>
       <NuspecProperties>$(NuspecProperties);copyright=$(SpecFlow_Copyright)</NuspecProperties>
       <NuspecProperties>$(NuspecProperties);author=$(SpecFlow_Authors)</NuspecProperties>
